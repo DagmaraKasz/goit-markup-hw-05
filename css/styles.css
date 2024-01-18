@@ -850,32 +850,42 @@ który jest utworzony za pomocą znacznika div*/
 
 /* Otwieranie/zamykanie okna modalnego Okno modalne z formularzem zgłoszeniowym otwiera się po kliknięciu na przycisk "Zamów usługę" . Aby skrypt działał,
 musisz dodać specjalne atrybuty do znaczników HTML,po których skrypt wyszukuje elementy: data-modal-open - do przycisku otwierania okna modalnego. data-modal-close - do przycisku zamykania okna modalnego. data-modal - do backdrop okna modalnego.*/
+/* Dla div w klasie ustawiony jest styl position: fixed,
+który unieruchamia element na stronie i nie pozwala mu przesuwać się względem jego kontenera lub elementu nadrzędnego podczas przewijania strony */
 .backdrop {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(46,47,66,0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 528%;
-    min-height: 581px;
-    background-color: var(--white-color);
+    transform: translate(-50%,-50%) scale(1);
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4%;
+    background-color: var(--dairy-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--white-color);
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--cornflower-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -885,3 +895,64 @@ musisz dodać specjalne atrybuty do znaczników HTML,po których skrypt wyszukuj
     pointer-events: none;
 }
 /* ============= END BACKDROP ============ */
+
+/* Portfolio przyciski */
+.buttons {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+  /* Karta transition dla Portfolio*/
+.img-transition {
+    width: 360px;
+    height: 300px;
+    background-color: var(--iris-color);
+    border:none;
+    color: var(--cloud-color);
+    font-size: 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .img-transition::after {
+    content:"14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
+    position: absolute;
+    background-color: var(--iris-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: -100%;
+    transition: transform 2s ease-in-out;
+    opacity: 0.5;
+} */
+
+.img-transition:hover::after {
+    transform: translateY(0%);
+}
+.img-transition:focus::after {
+    transform: translateY(0%);
+}
+
+.img-trans-container {
+    position: relative;
+    overflow: hidden;
+}
+.img-trans-text {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud-color);
+    padding: 40px 32px;
+    background-color: var(--iris-color);
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* <li class="list-link-buttons"><a class="image link image-link" href=""><img class="img" src="./images/img_9.jpg" alt="bank app" width="360" height="300"> */
+
+
+
