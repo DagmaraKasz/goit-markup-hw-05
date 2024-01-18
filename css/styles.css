@@ -942,12 +942,17 @@ który unieruchamia element na stronie i nie pozwala mu przesuwać się względe
     background-color: #404bbf;
     border-radius: 2px;
 }
-.img-transition:hover::after {
+/* .img-transition:hover::after {
     transform: translateY(0%);
 }
 .img-transition:focus::after {
     transform: translateY(0%);
+} */
+.img-transition:hover .overlay-text,
+.img-transition:focus .overlay-text {
+    transform: translateY(0%);
 }
+
 .img-trans-box {
     position: relative;
     overflow: hidden;
