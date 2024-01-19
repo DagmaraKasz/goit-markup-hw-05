@@ -905,6 +905,7 @@ który unieruchamia element na stronie i nie pozwala mu przesuwać się względe
 .close-btn:focus {
     background-color: #404bbf;
     border: none;
+    fill: var(--white-color);
 }
 
 .is-hidden {
