@@ -900,7 +900,7 @@ który unieruchamia element na stronie i nie pozwala mu przesuwać się względe
     background-color: #404bbf;
     border: none;
     background-color: #404bbf;
-    fill:var(--white-color)
+    fill:var(--white-color);
 }
 .close-btn:focus {
     background-color: #404bbf;
