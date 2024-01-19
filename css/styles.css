@@ -983,7 +983,8 @@ który unieruchamia element na stronie i nie pozwala mu przesuwać się względe
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--grey-color)
 }
-.svg-four:hover {
+.svg-four:hover,
+.svg-four:focus {
     fill: var(--white-color);
 }
 
